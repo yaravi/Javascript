@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Login</title>
+</head>
+<body>
+    <div class="alert alert-dismissible" role="alert" id="liveAlert">
+    </div>
+    
+    <main class="container mt-3">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-4">
+                <form action="">
+                    <div class="form-group">
+                      <label for="txt-user">Email address</label>
+                      <input type="email" class="form-control" id="txt-user" name="txt-user" aria-describedby="emailHelp">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="txt-pass">Password</label>
+                      <input type="password" class="form-control" name="txt-pass" id="txt-pass">   
+                    </div>
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" name="txt-session" id="txt-session">
+                      <label class="form-check-label" for="txt-session">Mantener sesión abierta</label>
+                    </div>
+                    <button type="button" id="btn-login" class="btn btn-primary">Login</button>
+                  </form>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="login.js"></script>
+</body>
+</html>
