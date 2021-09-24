@@ -21,6 +21,7 @@ class Pila {
     }
 }
 
+
 const pila1 = new Pila();
 pila1.push(1);
 pila1.push(2);
@@ -36,3 +37,42 @@ console.log("peek", pila1.peek());
 console.log(pila1);
 
 pila1.print();
+
+
+
+
+//////////////////// EJERCICIOS
+/*
+3.- Un conductor maneja de un pueblo origen a un pueblo destino, pasando por varios
+pueblos. Una vez en el pueblo destino, el conductor debe regresar a casa por el mismo
+camino. Muestre el camino recorrido tanto de ida como de vuelta. 
+Recorrido: Pueblo Origen → pueblo 1 → pueblo 2 → destino
+Regreso: destino → pueblo 2’ → pueblo 1 → Pueblo Origen
+*/
+
+function mostrarCamino (recorrido) {
+    let mostrarCamino = "";
+    let auxSize = recorrido.size();
+    for (let index = 0; index < recorrido.size(); index++) {
+        mostrarCamino += recorrido.peek();
+        
+        if (index != auxSize -1) {
+            mostrarCamino += " -> ";
+        }
+        recorrido.pop();
+    }
+
+    console.log("Regreso: ", mostrarCamino);
+}
+
+const recorrido = new Pila (); // Pila que almacena los destinos
+
+// Agregamos la ruta
+recorrido.push("Pueblo Origen");
+recorrido.push("Pueblo Origen");
+recorrido.push("Pueblo 1");
+recorrido.push("Pueblo 2");
+recorrido.push("Destino");
+
+mostrarCamino(recorrido);
+
