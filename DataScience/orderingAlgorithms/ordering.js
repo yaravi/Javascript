@@ -30,10 +30,11 @@ function insertionSort(array){
         let valorActual = array[i];
         while(posicion - 1 >= 0 && valorActual < array[posicion-1]) {
             array[posicion] = array [posicion - 1];
-            posicion = posicion - 1
+            posicion = posicion - 1;
+            console.log("While execution", array);
         }
         array[posicion] = valorActual;
-        console.log("array de vueltas", array)
+        console.log("array de vueltas", array);
     }
     return array;
 }
