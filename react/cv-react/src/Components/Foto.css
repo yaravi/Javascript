@@ -1,0 +1,12 @@
+.row
+{
+    width: 100%;
+    display: block;
+    background: linear-gradient(0deg, rgb(80, 78, 78) 0%, #2c2c2b 100%, rgb(48, 49, 49) 100%);
+}
+.bg-picture img {
+    max-width: 180px;
+    margin: 0 auto;
+    display: block;
+    background-color: #fff;
+}
